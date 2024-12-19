@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ category|title }} {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <article class="news-detail">
+            <h2>Yangilik Sarlavhasi</h2>
+            <p class="news-meta">Sana: {{ article.created_add }} | Muallif: {{ article.athor_name }}</p>
+            <div class="news-content">
+               <p>{{ article.long_content }}</p>
+            </div>
+            <a href="{% url 'home' %}">Back</a>
+        </article>
+    </div>
+{% endblock %}
